@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A Little Surprise For Chappri 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:#4b2528;background:#fff1f3;overflow-x:hidden}
+body.lock{overflow:hidden}
+#intro{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#fff9f5,#ffdce5 60%,#f7b7ca);transition:opacity .8s,visibility .8s}
+#intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+.intro-box{text-align:center;padding:30px;max-width:560px}
+.intro-heart{font-size:65px;animation:pulse 1.3s infinite}
+.intro-box h1{font:52px Pacifico;color:#d93668;margin:12px 0}
+.intro-box p{font:27px Caveat;margin-bottom:22px}
+.gift{position:relative;width:130px;height:120px;margin:20px auto 28px;cursor:pointer;filter:drop-shadow(0 12px 10px rgba(100,30,50,.2));animation:float 2s ease-in-out infinite}
+.gift .box{position:absolute;left:5px;right:5px;bottom:0;height:82px;background:linear-gradient(#ff86a6,#ed4777);border-radius:8px}
+.gift .lid{position:absolute;left:0;right:0;top:25px;height:28px;background:#f25b86;border-radius:7px;z-index:2}
+.gift .ribbon-v{position:absolute;left:52px;top:25px;width:25px;height:95px;background:#ffe4ec;z-index:3}
+.gift .ribbon-h{position:absolute;left:0;right:0;top:32px;height:14px;background:#ffe4ec;z-index:4}
+.bow{position:absolute;top:3px;left:44px;width:43px;height:32px;z-index:5}
+.bow:before,.bow:after{content:"";position:absolute;width:29px;height:24px;background:#ffe4ec;border-radius:50% 50% 50% 10%;top:0}
+.bow:before{left:-4px;transform:rotate(25deg)}.bow:after{right:-4px;transform:scaleX(-1) rotate(25deg)}
+.open-text{font:24px Caveat;color:#8e3a4e}
+button{border:0;cursor:pointer;font:22px Caveat;border-radius:30px;padding:11px 28px;background:#e93d72;color:white;box-shadow:0 8px 18px rgba(233,61,114,.25)}
+nav{position:sticky;top:0;z-index:50;height:68px;background:rgba(255,246,247,.96);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;padding:0 5%;box-shadow:0 2px 15px rgba(160,60,80,.08)}
+.logo,.nav-special{font:700 23px Caveat;color:#d83f6e}
+nav ul{list-style:none;display:flex;gap:7px;align-items:center}
+nav a{color:#392629;text-decoration:none;padding:9px 14px;border-radius:25px;font:20px Caveat}
+nav a:hover{background:#ffd1dc;color:#c62f61}
+.hero{min-height:610px;padding:65px 5%;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:30px;align-items:center;background:linear-gradient(135deg,#fff5f1,#ffe9e8 50%,#fff6ee);position:relative}
+.hero:after{content:"♥  ✦  ♡  ✿  ♥  ✦  ♡";position:absolute;inset:20px 0 auto;text-align:center;color:#ef94aa;font-size:25px;letter-spacing:25px;opacity:.55}
+.photo-polaroid{background:#fff;padding:12px 12px 42px;box-shadow:0 12px 30px rgba(89,38,45,.18);transform:rotate(-5deg);position:relative}
+.photo-polaroid img{width:100%;height:390px;object-fit:cover;display:block}
+.polaroid-note{position:absolute;bottom:9px;left:0;right:0;text-align:center;font:22px Caveat}
+.tape{position:absolute;width:78px;height:25px;background:#ffd7dd;top:-10px;left:40%;transform:rotate(-7deg)}
+.hero-copy{text-align:center}
+.script{font:52px/1.05 Pacifico;color:#e2386b}.script small{display:block;font:70px Caveat;color:#382022}
+.subtitle{font:32px Caveat;color:#5d3438;margin:16px 0}
+.brush{display:inline-block;background:#ffc6d2;padding:8px 28px;border-radius:45% 55% 50% 40%;font:26px Caveat;color:#7a303d;transform:rotate(-2deg)}
+.hero-msg{font:24px Caveat;max-width:520px;margin:18px auto}
+.music-card{background:rgba(255,255,255,.9);border:1px solid #f3d8dc;border-radius:18px;padding:22px;box-shadow:0 10px 28px rgba(70,25,30,.12)}
+.album{display:flex;gap:15px;align-items:center}.album-art{width:78px;height:78px;border-radius:12px;object-fit:cover}
+.song-title{font-weight:600}.song-sub{font-size:12px;color:#9a777a}.music-card audio{width:100%;margin-top:18px;height:38px}.music-note{text-align:center;font:20px Caveat;color:#d83f6e;margin-top:7px}.music-credit{text-align:center;font:9px Poppins;color:#b59a9e;margin-top:8px;opacity:.7;letter-spacing:.2px}
+.section{padding:58px 5%}.section-title{text-align:center;font:42px Caveat;color:#532b2f;margin-bottom:30px}.section-title span{color:#e43e70}
+.gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.card{background:#fff;padding:9px 9px 35px;box-shadow:0 7px 18px rgba(72,28,34,.12);position:relative}
+.card:nth-child(1){transform:rotate(-2deg)}.card:nth-child(2){transform:rotate(2deg)}.card:nth-child(3){transform:rotate(-1deg)}.card:nth-child(4){transform:rotate(2deg)}.card:nth-child(5){transform:rotate(-2deg)}.card:nth-child(6){transform:rotate(1deg)}.card:nth-child(7){transform:rotate(-1deg)}.card:nth-child(8){transform:rotate(2deg)}.card:nth-child(9){transform:rotate(-2deg)}.card:nth-child(10){transform:rotate(1deg)}
+.card img{width:100%;height:230px;object-fit:cover;display:block}.caption{position:absolute;bottom:6px;left:0;right:0;text-align:center;font:20px Caveat}
+.info-grid{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:18px}.panel{border-radius:20px;padding:28px;min-height:280px;box-shadow:0 5px 16px rgba(70,30,35,.08)}
+.pink{background:#ffd9e1}.cream{background:#fff3dd}.blue{background:#dcecff}.panel h3{font:34px Caveat;margin-bottom:14px}.panel ul{list-style:none;line-height:2.1;font-size:15px}.panel li:before{content:"✓";display:inline-flex;width:23px;height:23px;border-radius:50%;align-items:center;justify-content:center;background:#fff;color:#ed4c78;font-weight:bold;margin-right:8px}
+.hand{font:22px Caveat;color:#e23c6e;text-align:right;margin-top:8px}.wish{font:17px/1.9 Poppins}.signature{font:32px Pacifico;color:#dd376a;margin-top:18px}
+.final{min-height:330px;padding:65px 5%;background:linear-gradient(120deg,#2d2529,#5a3036);color:#fff;text-align:center}.final h2{font:43px Caveat}.cake{font-size:105px;margin:8px}.final p{font:21px Caveat}
+.footer{padding:16px 5%;background:#ffdce3;display:flex;justify-content:space-between;font:19px Caveat}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10000}.piece{position:absolute;top:-20px;width:9px;height:15px;animation:fall linear forwards}
+.float{position:fixed;bottom:-40px;font-size:25px;animation:rise 7s linear infinite;pointer-events:none;z-index:1;opacity:.7}
+.modal{position:fixed;inset:0;z-index:500;background:rgba(45,25,30,.62);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}.modal-box{background:#fff5f1;border-radius:25px;max-width:560px;text-align:center;padding:38px;box-shadow:0 25px 70px rgba(0,0,0,.25);position:relative}
+.modal-box h2{font:43px Caveat;color:#dc3c6b}.modal-box p{font:23px/1.5 Caveat;margin:15px 0}.close{position:absolute;right:14px;top:10px;background:#ffd2dc;color:#8d3549;padding:5px 13px}
+@keyframes pulse{50%{transform:scale(1.12)}}@keyframes float{50%{transform:translateY(-9px)}}@keyframes rise{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@media(max-width:1050px){.hero{grid-template-columns:1fr 1.4fr}.music-card{grid-column:1/-1}.gallery{grid-template-columns:repeat(3,1fr)}.info-grid{grid-template-columns:1fr}}
+@media(max-width:650px){nav{height:auto;padding:10px 4%;flex-wrap:wrap}.logo,.nav-special{font-size:18px}nav ul{order:3;width:100%;overflow:auto}nav a{font-size:17px;padding:7px 10px}.hero{grid-template-columns:1fr;padding-top:45px}.photo-polaroid{max-width:380px;margin:auto}.photo-polaroid img{height:390px}.script{font-size:40px}.script small{font-size:56px}.subtitle{font-size:27px}.gallery{grid-template-columns:1fr 1fr}.card img{height:190px}.section-title{font-size:36px}.footer{flex-direction:column;text-align:center;gap:4px}.intro-box h1{font-size:43px}}
+</style>
+</head>
+<body class="lock">
+
+<div id="intro">
+  <div class="intro-box">
+    <div class="intro-heart">💗</div>
+    <h1>Hey Chappri...</h1>
+    <p>Someone has prepared a little birthday surprise just for you ✨</p>
+    <div class="gift" id="gift" title="Open your surprise">
+      <div class="bow"></div><div class="lid"></div><div class="ribbon-v"></div><div class="ribbon-h"></div><div class="box"></div>
+    </div>
+    <div class="open-text">Tap the gift to open your surprise 🎁</div>
+  </div>
+</div>
+
+<div id="confetti"></div>
+<div id="hearts"></div>
+
+<nav>
+  <div class="logo">♥ For Chappri</div>
+  <ul>
+    <li><a href="#home">Home</a></li><li><a href="#message">Message</a></li><li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reasons">Reasons</a></li><li><a href="#wish">Wish</a></li><li><a href="#song">Play Song</a></li>
+  </ul>
+  <div class="nav-special">♥ Always Special</div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="photo-polaroid"><div class="tape"></div><img src="hero.jpg" alt="Chappri"><div class="polaroid-note">A sister like you is a blessing ♥</div></div>
+  <div class="hero-copy">
+    <div class="script"><small>Happy</small>Birthday</div>
+    <div class="script">Chappri ♥</div>
+    <div class="brush">To my amazing sister</div>
+    <p class="hero-msg">May your life be as beautiful, bright and happy as your smile. ✨</p>
+    <div class="subtitle">Today is all about YOU! 🎂</div>
+    <button onclick="openMessage()">💌 Open a little message</button>
+  </div>
+  <div class="music-card" id="song">
+    <div class="album"><img class="album-art" src="photo4.jpg" alt=""><div><div class="song-title">Tere Liye Mandir Jaun</div><div class="song-sub">A special song for you ♥</div></div></div>
+    <audio id="birthdaySong" controls preload="auto">
+      <source src="Khat.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+    <div class="music-note">“Khat” by Navjot Ahuja — playing directly on this page 🎵</div><div class="music-credit">Song: “Khat” — Navjot Ahuja • © respective rights holder • Personal birthday surprise</div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <h2 class="section-title">📷 Some Beautiful <span>Moments</span> ♥</h2>
+  <div class="gallery">
+    <div class="card"><img src="photo1.jpg" alt="Chappri photo 1"><div class="caption">Beautiful ♥</div></div>
+    <div class="card"><img src="photo2.jpg" alt="Chappri photo 2"><div class="caption">Cute ♥</div></div>
+    <div class="card"><img src="photo3.jpg" alt="Chappri photo 3"><div class="caption">Adventurous ♥</div></div>
+    <div class="card"><img src="photo4.jpg" alt="Chappri photo 4"><div class="caption">Elegant ♥</div></div>
+    <div class="card"><img src="photo5.jpg" alt="Chappri photo 5"><div class="caption">Lovely ♥</div></div>
+    <div class="card"><img src="photo6.jpg" alt="Chappri photo 6"><div class="caption">Sweet ♥</div></div>
+    <div class="card"><img src="photo7.jpg" alt="Chappri photo 7"><div class="caption">Beautiful ♥</div></div>
+    <div class="card"><img src="photo8.jpg" alt="Chappri photo 8"><div class="caption">Shining ♥</div></div>
+    <div class="card"><img src="photo9.jpg" alt="Chappri photo 9"><div class="caption">Special ♥</div></div>
+    <div class="card"><img src="photo10.jpg" alt="Chappri photo 10"><div class="caption">Always ♥</div></div>
+  </div>
+</section>
+
+<section class="section" id="message">
+  <div class="info-grid">
+    <div class="panel pink" id="reasons"><h3>♥ You Are...</h3><ul>
+      <li>My Sister</li><li>My Chota Secret Keeper</li><li>My Happiness</li><li>My Support System</li><li>My Partner in Crime</li><li>My Forever Friend</li>
+    </ul><div class="hand">Thank you for being you ♥</div></div>
+    <div class="panel cream" id="wish"><h3>⭐ My Birthday Wish For You</h3>
+      <p class="wish">May this year bring you closer to all your dreams. May you always stay happy, healthy and surrounded by people who love you. Keep being the kind, adorable and strong person you are. The world is lucky to have you, and I am the luckiest to have you as my sister.</p>
+      <div class="signature">Happy Birthday Chappri ♥</div>
+    </div>
+    <div class="panel blue"><h3>🎁 Always Remember...</h3><ul>
+      <li>You are enough</li><li>You are special</li><li>You are loved</li><li>You are stronger than you think</li><li>You can do anything</li><li>I'll always be there for you</li>
+    </ul><div class="hand">Keep Smiling ♥</div></div>
+  </div>
+</section>
+
+<section class="final">
+  <h2>Sisters make life more colourful ♥</h2><div class="cake">🎂</div>
+  <p>Here's to more fun, more memories, and a lifetime of sisterhood.</p>
+  <p style="margin-top:14px">Happy Birthday, Chappri! 🥳💕</p>
+</section>
+
+<div class="footer"><span>♥ Made with love for Chappri</span><span>“A sister is a little bit of childhood that can never be lost.”</span><span>Stay Happy Always ♥</span></div>
+
+<div class="modal" id="messageModal">
+  <div class="modal-box"><button class="close" onclick="closeMessage()">×</button>
+    <h2>For My Lovely Sister, Chappri 💗</h2>
+    <p>Life is a little more fun, a little more chaotic, and a lot more beautiful because you're my sister.</p>
+    <p>I hope every dream you carry in your heart finds its way to you. Keep laughing, keep shining, and never forget how special you are.</p>
+    <p><b>Happy Birthday, Chappri! 🎂✨</b></p>
+    <button onclick="closeMessage()">Aww okay! 💕</button>
+  </div>
+</div>
+
+<script>
+const intro=document.getElementById('intro');
+document.getElementById('gift').onclick=()=>{
+  launchConfetti(180);
+  intro.classList.add('hide');
+  document.body.classList.remove('lock');
+  const song=document.getElementById('birthdaySong');
+  song.play().catch(()=>{});
+  setTimeout(()=>document.getElementById('home').scrollIntoView({behavior:'smooth'}),450);
+};
+function launchConfetti(n=100){
+  const box=document.getElementById('confetti');
+  for(let i=0;i<n;i++){
+    const p=document.createElement('i');p.className='piece';
+    p.style.left=Math.random()*100+'vw';
+    p.style.background=['#f04b79','#ffc2d1','#f6b74d','#9cc7ff','#fff'][Math.floor(Math.random()*5)];
+    p.style.transform=`rotate(${Math.random()*360}deg)`;
+    p.style.animationDuration=(2+Math.random()*3)+'s';
+    p.style.animationName='fall';
+    box.appendChild(p);setTimeout(()=>p.remove(),5500);
+  }
+}
+const st=document.createElement('style');
+st.textContent='@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}';
+document.head.appendChild(st);
+function openMessage(){document.getElementById('messageModal').classList.add('show');launchConfetti(70)}
+function closeMessage(){document.getElementById('messageModal').classList.remove('show')}
+const symbols=['♥','♡','✦','✿'];
+setInterval(()=>{
+  const s=document.createElement('div');s.className='float';s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  s.style.left=Math.random()*100+'vw';s.style.animationDuration=(5+Math.random()*5)+'s';s.style.fontSize=(16+Math.random()*22)+'px';
+  document.getElementById('hearts').appendChild(s);setTimeout(()=>s.remove(),11000);
+},700);
+</script>
+</body>
+</html>
